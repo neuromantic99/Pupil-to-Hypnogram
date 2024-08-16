@@ -1,3 +1,25 @@
+# JR additional installation instructions
+* Download the root folder from [here](https://data.mendeley.com/datasets/rr4gc6mybg/1)
+* Rename the folder Pupil-to-hypnogram-data
+
+On mac:
+```bash
+conda create -n dlc_new python=3.9
+conda activate dlc_new
+conda install pytables==3.8.0
+pip install 'deeplabcut[tf]'
+pip install --upgrade tensorflow-macos==2.12.0
+```
+
+Linux should work with just:
+```bash
+pip install 'deeplabcut[tf]'
+```
+
+change the paths in dlc.py and run it to apply the pretrained model to your data
+
+
+
 # Pupil-based hypnogram
 This repository contains Python and MATLAB codes for our paper ([Keio J Med 2023](https://doi.org/10.2302/kjm.2022-0020-OA) and [bioRxiv](https://biorxiv.org/cgi/content/short/2022.08.06.503067v1)) __"Pupil dynamics-derived sleep stage classification of a head-fixed mouse using a recurrent neural network"__. Sample data are available at [Mendeley Data](https://doi.org/10.17632/rr4gc6mybg.1).
 
